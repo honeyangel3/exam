@@ -6,7 +6,7 @@ from pydantic import BaseModel
 from sqlalchemy import create_engine, inspect
 from sqlalchemy import text
 
-# DATABASE CONNECTION
+# Database connection
 engine = create_engine("postgresql://new_d1ux_user:9A3mcbEEuKsgBUHJcyj1RvkZa050EjPu@dpg-d0k293vfte5s7389i9og-a.singapore-postgres.render.com/new_d1ux",  client_encoding='utf8')
 
 connection = engine.connect()
@@ -32,7 +32,7 @@ result = connection.execute(
 connection.commit()
 print(asd.get_table_names())
 
-# FASTAPI
+# FastAPI app
 
 app = FastAPI()
 
